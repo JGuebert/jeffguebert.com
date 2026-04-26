@@ -118,6 +118,70 @@
       gap: 1.75rem;
     }
 
+    /* ── Employer block (groups multiple roles at one company) ── */
+
+    .employer {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .employer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .employer-name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-heading);
+    }
+
+    .employer-span {
+      font-size: 0.825rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .employer-roles {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-left: 1rem;
+      border-left: 2px solid var(--border);
+    }
+
+    .role {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .role-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .role-title {
+      font-size: 0.925rem;
+      font-weight: 500;
+      color: var(--accent-blue);
+    }
+
+    .role-date {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    /* ── Single-company entry (Education reuses these) ── */
+
     .resume-entry {
       display: flex;
       flex-direction: column;
@@ -151,7 +215,7 @@
     }
 
     .entry-bullets {
-      margin-top: 0.5rem;
+      margin-top: 0.375rem;
       padding-left: 1.25rem;
       display: flex;
       flex-direction: column;
@@ -190,6 +254,8 @@
     }
 
     @media (max-width: 480px) {
+      .employer-header,
+      .role-header,
       .entry-header {
         flex-direction: column;
         gap: 0.1rem;
@@ -244,42 +310,60 @@
         <h2 class="resume-section-heading">Work Experience</h2>
         <div class="resume-entries">
 
-          <div class="resume-entry">
-            <div class="entry-header">
-              <span class="entry-title">Job Title Placeholder</span>
-              <span class="entry-date">Month Year &ndash; Present</span>
+          <!-- Employer with multiple roles -->
+          <div class="employer">
+            <div class="employer-header">
+              <span class="employer-name">Company Name Placeholder</span>
+              <span class="employer-span">Month Year &ndash; Present</span>
             </div>
-            <span class="entry-org">Company Name Placeholder</span>
-            <ul class="entry-bullets">
-              <li>Placeholder bullet describing a key responsibility or achievement.</li>
-              <li>Placeholder bullet describing a key responsibility or achievement.</li>
-              <li>Placeholder bullet describing a key responsibility or achievement.</li>
-            </ul>
+            <div class="employer-roles">
+
+              <div class="role">
+                <div class="role-header">
+                  <span class="role-title">Senior Job Title Placeholder</span>
+                  <span class="role-date">Month Year &ndash; Present</span>
+                </div>
+                <ul class="entry-bullets">
+                  <li>Placeholder bullet describing a key responsibility or achievement.</li>
+                  <li>Placeholder bullet describing a key responsibility or achievement.</li>
+                  <li>Placeholder bullet describing a key responsibility or achievement.</li>
+                </ul>
+              </div>
+
+              <div class="role">
+                <div class="role-header">
+                  <span class="role-title">Job Title Placeholder</span>
+                  <span class="role-date">Month Year &ndash; Month Year</span>
+                </div>
+                <ul class="entry-bullets">
+                  <li>Placeholder bullet describing a key responsibility or achievement.</li>
+                  <li>Placeholder bullet describing a key responsibility or achievement.</li>
+                </ul>
+              </div>
+
+            </div>
           </div>
 
-          <div class="resume-entry">
-            <div class="entry-header">
-              <span class="entry-title">Job Title Placeholder</span>
-              <span class="entry-date">Month Year &ndash; Month Year</span>
+          <!-- Employer with a single role -->
+          <div class="employer">
+            <div class="employer-header">
+              <span class="employer-name">Company Name Placeholder</span>
+              <span class="employer-span">Month Year &ndash; Month Year</span>
             </div>
-            <span class="entry-org">Company Name Placeholder</span>
-            <ul class="entry-bullets">
-              <li>Placeholder bullet describing a key responsibility or achievement.</li>
-              <li>Placeholder bullet describing a key responsibility or achievement.</li>
-              <li>Placeholder bullet describing a key responsibility or achievement.</li>
-            </ul>
-          </div>
+            <div class="employer-roles">
 
-          <div class="resume-entry">
-            <div class="entry-header">
-              <span class="entry-title">Job Title Placeholder</span>
-              <span class="entry-date">Month Year &ndash; Month Year</span>
+              <div class="role">
+                <div class="role-header">
+                  <span class="role-title">Job Title Placeholder</span>
+                  <span class="role-date">Month Year &ndash; Month Year</span>
+                </div>
+                <ul class="entry-bullets">
+                  <li>Placeholder bullet describing a key responsibility or achievement.</li>
+                  <li>Placeholder bullet describing a key responsibility or achievement.</li>
+                </ul>
+              </div>
+
             </div>
-            <span class="entry-org">Company Name Placeholder</span>
-            <ul class="entry-bullets">
-              <li>Placeholder bullet describing a key responsibility or achievement.</li>
-              <li>Placeholder bullet describing a key responsibility or achievement.</li>
-            </ul>
           </div>
 
         </div>
