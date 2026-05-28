@@ -236,6 +236,26 @@
       line-height: 1.6;
     }
 
+    .entry-link {
+      display: inline-flex;
+      align-items: center;
+      vertical-align: middle;
+      margin-left: 0.3rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 150ms ease;
+    }
+
+    .entry-link:hover {
+      color: var(--accent-blue);
+    }
+
+    .entry-link:focus-visible {
+      outline: 2px solid var(--accent-blue);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
     .skills-grid {
       display: flex;
       flex-wrap: wrap;
@@ -281,6 +301,7 @@
 
       #theme-toggle,
       .resume-back,
+      .entry-link,
       footer {
         display: none !important;
       }
@@ -381,7 +402,7 @@
 
           <div class="employer">
             <div class="employer-header">
-              <span class="employer-name">Apple Inc</span>
+              <span class="employer-name">Apple Inc<a href="https://games.apple.com" class="entry-link" target="_blank" rel="noopener noreferrer" aria-label="Apple Games website"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></span>
               <span class="employer-span">December 2026 &ndash; Present</span>
             </div>
             <div class="employer-roles">
@@ -459,7 +480,7 @@
               <span class="entry-title">B.S. in Computer Science</span>
               <span class="entry-date">2005 &ndash; 2009</span>
             </div>
-            <span class="entry-org">University of Texas at Dallas</span>
+            <span class="entry-org">University of Texas at Dallas<a href="https://cs.utdallas.edu" class="entry-link" target="_blank" rel="noopener noreferrer" aria-label="UT Dallas Computer Science website"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></span>
             <p class="entry-detail">Summa Cum Laude, Major Honors, Collegium V Honors</p>
           </div>
 
