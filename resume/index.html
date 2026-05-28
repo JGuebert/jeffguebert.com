@@ -113,6 +113,64 @@
       border-bottom: 1px solid var(--border);
     }
 
+    .resume-contact {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.825rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 150ms ease;
+    }
+
+    .contact-link:hover { color: var(--accent-blue); }
+
+    .contact-link:focus-visible {
+      outline: 2px solid var(--accent-blue);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    .resume-summary-text {
+      font-size: 0.925rem;
+      line-height: 1.65;
+      color: var(--text);
+    }
+
+    .skills-categories {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .skills-category {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .skills-category-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .skills-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
     .resume-entries {
       display: flex;
       flex-direction: column;
@@ -384,8 +442,15 @@
 
       .resume-section-heading { font-size: 7.5pt; padding-bottom: 0.2rem; }
 
-      .skills-grid     { gap: 0.3rem; }
-      .skill-tag       { font-size: 8.5pt; padding: 0.15rem 0.55rem; }
+      .resume-contact      { gap: 0.75rem; margin-top: 0.25rem; }
+      .contact-link        { font-size: 8.5pt; color: #444; }
+      .contact-link svg    { display: none; }
+      .resume-summary-text { font-size: 9pt; line-height: 1.5; }
+      .skills-categories   { gap: 0.5rem; }
+      .skills-category     { gap: 0.2rem; }
+      .skills-category-label { font-size: 7pt; }
+      .skills-row          { gap: 0.25rem; }
+      .skill-tag           { font-size: 8.5pt; padding: 0.15rem 0.55rem; }
     }
   </style>
 </head>
@@ -428,7 +493,33 @@
           Jeff Guebert
         </a>
         <h1 class="resume-name">Jeff Guebert</h1>
-        <p class="resume-subtitle">Program Manager &middot; Seattle, WA</p>
+        <p class="resume-subtitle">Senior Program Manager &middot; Seattle, WA</p>
+        <div class="resume-contact">
+          <a href="mailto:jeff@jeffguebert.com" class="contact-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            jeff@jeffguebert.com
+          </a>
+          <a href="https://linkedin.com/in/jguebert" class="contact-link"
+             target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24"
+                 fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            linkedin.com/in/jguebert
+          </a>
+          <span class="contact-link">[Phone Number]</span>
+        </div>
+      </div>
+
+      <!-- ── Summary ───────────────────────────────────────────────────── -->
+      <div class="resume-section">
+        <h2 class="resume-section-heading">Summary</h2>
+        <p class="resume-summary-text">Senior Program Manager with 15+ years delivering developer platforms, App Store infrastructure, and gaming integrations at Apple and Microsoft. Proven track record leading cross-functional engineering initiatives spanning platform services, SDKs, developer tooling, and consumer-facing experiences at global scale. Combines deep technical fluency with strong organizational influence to align engineering, design, and marketing teams around high-impact outcomes.</p>
       </div>
 
       <!-- ── Work Experience ──────────────────────────────────────────── -->
@@ -439,7 +530,7 @@
           <div class="employer">
             <div class="employer-header">
               <a href="https://games.apple.com" class="employer-name" target="_blank" rel="noopener noreferrer" aria-label="Apple Games">Apple Inc<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-              <span class="employer-span">December 2026 &ndash; Present</span>
+              <span class="employer-span">December 2016 &ndash; Present</span>
             </div>
             <div class="employer-roles">
 
@@ -527,15 +618,41 @@
       <!-- ── Skills ───────────────────────────────────────────────────── -->
       <div class="resume-section">
         <h2 class="resume-section-heading">Skills</h2>
-        <div class="skills-grid">
-          <span class="skill-tag">Program Management</span>
-          <span class="skill-tag">Roadmap Planning</span>
-          <span class="skill-tag">Milestone Tracking</span>
-          <span class="skill-tag">Executive Communication</span>
-          <span class="skill-tag">Resource Planning</span>
-          <span class="skill-tag">Software Development Lifecycle (SDLC)</span>
-          <span class="skill-tag">Process Improvement</span>
-          <span class="skill-tag">Risk Management</span>
+        <div class="skills-categories">
+
+          <div class="skills-category">
+            <span class="skills-category-label">Program Leadership</span>
+            <div class="skills-row">
+              <span class="skill-tag">Cross-Functional Leadership</span>
+              <span class="skill-tag">Executive Stakeholder Management</span>
+              <span class="skill-tag">Roadmap &amp; Portfolio Planning</span>
+              <span class="skill-tag">Resource Planning</span>
+              <span class="skill-tag">Risk Management</span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <span class="skills-category-label">Technical Domains</span>
+            <div class="skills-row">
+              <span class="skill-tag">Developer Platforms &amp; SDKs</span>
+              <span class="skill-tag">App Store Infrastructure</span>
+              <span class="skill-tag">iOS, macOS, tvOS &amp; watchOS</span>
+              <span class="skill-tag">Game Platform Integration</span>
+              <span class="skill-tag">Connected Devices / IoT</span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <span class="skills-category-label">Delivery &amp; Operations</span>
+            <div class="skills-row">
+              <span class="skill-tag">Software Development Lifecycle (SDLC)</span>
+              <span class="skill-tag">Release &amp; Launch Management</span>
+              <span class="skill-tag">Agile Program Delivery</span>
+              <span class="skill-tag">Process Improvement</span>
+              <span class="skill-tag">Milestone Tracking</span>
+            </div>
+          </div>
+
         </div>
       </div>
 
