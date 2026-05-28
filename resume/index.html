@@ -41,7 +41,7 @@
     main {
       padding-top: 3rem;
       gap: 0;
-      max-width: 760px;
+      max-width: 900px;
     }
 
     .resume {
@@ -495,15 +495,7 @@
         <h1 class="resume-name">Jeff Guebert</h1>
         <p class="resume-subtitle">Senior Program Manager &middot; Seattle, WA</p>
         <div class="resume-contact">
-          <a href="mailto:jeff@jeffguebert.com" class="contact-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24"
-                 fill="none" stroke="currentColor" stroke-width="2"
-                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
-            jeff@jeffguebert.com
-          </a>
+          <span id="resume-email-slot"></span>
           <a href="https://linkedin.com/in/jguebert" class="contact-link"
              target="_blank" rel="noopener noreferrer">
             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24"
@@ -512,7 +504,6 @@
             </svg>
             linkedin.com/in/jguebert
           </a>
-          <span class="contact-link">[Phone Number]</span>
         </div>
       </div>
 
@@ -693,6 +684,24 @@
     toggle.addEventListener('click', function () {
       applyTheme(effectiveTheme() === 'dark' ? 'light' : 'dark');
     });
+
+    // Assemble email link at runtime so the address is never in the HTML source
+    (function () {
+      var slot = document.getElementById('resume-email-slot');
+      if (!slot) return;
+      var addr = ['jeff', 'jeffguebert' + '.com'].join('@');
+      var a = document.createElement('a');
+      a.href = 'mailto:' + addr;
+      a.className = 'contact-link';
+      a.setAttribute('aria-label', 'Email Jeff Guebert');
+      a.innerHTML =
+        '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24"' +
+        ' fill="none" stroke="currentColor" stroke-width="2"' +
+        ' stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+        '<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>' +
+        '<polyline points="22,6 12,13 2,6"/></svg>' + addr;
+      slot.parentNode.replaceChild(a, slot);
+    }());
   </script>
 
 </body>
