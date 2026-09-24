@@ -201,6 +201,7 @@
 
     .employer-span {
       font-size: 0.825rem;
+      font-weight: 600;
       color: var(--text-muted);
       white-space: nowrap;
     }
@@ -263,6 +264,7 @@
 
     .entry-date {
       font-size: 0.825rem;
+      font-weight: 600;
       color: var(--text-muted);
       white-space: nowrap;
     }
@@ -451,6 +453,8 @@
       .skills-category-label { font-size: 7pt; }
       .skills-row          { gap: 0.25rem; }
       .skill-tag           { font-size: 8.5pt; padding: 0.15rem 0.55rem; }
+
+      #personal-projects { break-before: page; }
     }
   </style>
 </head>
@@ -490,7 +494,7 @@
                aria-hidden="true">
             <polyline points="15 18 9 12 15 6"/>
           </svg>
-          Jeff Guebert
+          Homepage
         </a>
         <h1 class="resume-name">Jeff Guebert</h1>
         <p class="resume-subtitle">Senior Program Manager &middot; Seattle, WA</p>
@@ -508,13 +512,13 @@
       </div>
 
       <!-- ── Summary ───────────────────────────────────────────────────── -->
-      <div class="resume-section">
+      <div class="resume-section" id="summary">
         <h2 class="resume-section-heading">Summary</h2>
-        <p class="resume-summary-text">Senior Program Manager with 15+ years delivering developer platforms, App Store infrastructure, and gaming integrations at Apple and Microsoft. Proven track record leading cross-functional engineering initiatives spanning platform services, SDKs, developer tooling, and consumer-facing experiences at global scale. Combines deep technical fluency with strong organizational influence to align engineering, design, and marketing teams around high-impact outcomes.</p>
+        <p class="resume-summary-text">Senior Program Manager with 15+ years leading and delivering cross-functional engineering initiatives spanning platform services, SDKs, developer tooling, and consumer-facing experiences at Apple and Microsoft. Combines deep technical fluency with strong organizational influence to align engineering, design, and marketing teams around high-impact and quality outcomes.</p>
       </div>
 
       <!-- ── Work Experience ──────────────────────────────────────────── -->
-      <div class="resume-section">
+      <div class="resume-section" id="work-experience">
         <h2 class="resume-section-heading">Work Experience</h2>
         <div class="resume-entries">
 
@@ -531,34 +535,34 @@
                   <span class="role-date">August 2025 &ndash; Present</span>
                 </div>
                 <ul class="entry-bullets">
-                  <li>Delivering Game Overlay on iOS and macOS across [X] engineering and design teams, improving the in-game experience for [X]M+ players</li>
-                  <li>Shipped Unity SDK plugins for [X]+ game studios, enabling native Apple framework integration and cutting implementation effort by [X]%</li>
-                  <li>Improved Mac App Store game distribution, streamlining submission workflows for [X]+ publishers</li>
-                  <li>Aligned [X]+ Apple teams across engineering, developer relations, and marketing on a unified gaming strategy</li>
+                  <li>Delivering Game Overlay on iOS and macOS across engineering and design teams, improving the in-game experience for 400M+ players</li>
+                  <li>Shipping Unity SDK plugins used by [X]+ game studios, enabling native Apple framework integration</li>
+                  <li>Improving Mac App Store game distribution, streamlining submission workflows for [X]+ developers/publishers</li>
+                  <li>Mentoring junior team members and fostering a culture of innovation and collaboration</li>
                 </ul>
               </div>
 
               <div class="role">
                 <div class="role-header">
-                  <span class="role-title">Senior Program Manager Lead, App Processing and TestFlight</span>
-                  <span class="role-date">April 2021 &ndash; August 2025</span>
+                  <span class="role-title">Senior Program Manager Lead, App Store Developer Features</span>
+                  <span class="role-date">March 2021 &ndash; August 2025</span>
                 </div>
                 <ul class="entry-bullets">
-                  <li>Led [X]-person App Processing EPM team, owning feature intake and delivery across [X]+ engineering workstreams</li>
-                  <li>Directed [X] engineering and QA teams, delivering [X]+ App Store enhancements per [quarter/year] at [X]% platform availability</li>
-                  <li>Reviewed and approved marketing, communications, and documentation for [X]+ feature launches annually</li>
+                  <li>Hired and led 4-person App Processing and TestFlight EPM team managing roadmap and projects for 20+ engineering and quality team partners</li>
+                  <li>Managed cross-functional relationships with engineering, design, and marketing teams to drive product development and delivery</li>
+                  <li>Reviewed and approved internal and external communications and documentation for 15+ server deployments annually</li>
                 </ul>
               </div>
 
               <div class="role">
                 <div class="role-header">
-                  <span class="role-title">Senior Program Manager, App Processing</span>
-                  <span class="role-date">December 2016 &ndash; April 2021</span>
+                  <span class="role-title">Senior Program Manager, App Store Developer Features</span>
+                  <span class="role-date">December 2016 &ndash; March 2021</span>
                 </div>
                 <ul class="entry-bullets">
-                  <li>Owned App Store submission and review experience for [X]M+ developers across iOS, tvOS, watchOS, and macOS, reducing average review time from [X] to [X]</li>
+                  <li>Owned App Store backend processing and validations pipeline for [X]M+ developers across iOS, tvOS, watchOS, and macOS</li>
                   <li>Delivered [X] feature updates from developer and customer feedback, raising platform performance metrics by [X]%</li>
-                  <li>Maintained alignment across [X] platform teams and [X] concurrent development tracks</li>
+                  <li>Maintained project alignment across [X] engineering and quality teams working in parallel across 5+ annual developer software releases</li>
                 </ul>
               </div>
 
@@ -574,12 +578,25 @@
 
               <div class="role">
                 <div class="role-header">
-                  <span class="role-title">Program Manager 2</span>
+                  <span class="role-title">Program Manager 2, Windows Devices and Connectivity</span>
+                  <span class="role-date">2012 &ndash; 2016</span>
                 </div>
                 <ul class="entry-bullets">
-                  <li>Authored AllJoyn/IoTivity protocol specifications adopted by [X]+ device partners across [X] engineering teams</li>
-                  <li>Delivered [X]+ improvements to Windows MTP, UPnP, and Bluetooth features for [X]M+ users</li>
-                  <li>Shipped redesigned File Explorer with content view and Ribbon UI for [X]M+ Windows users</li>
+                  <li>Chaired Wi-Fi Easy Setup Project in Open Connectivity Foundation with 10+ industry partners focused on AllJoyn/IoTivity protocol enhancements</li>
+                  <li>Enhanced Windows MTP, UPnP, WSD, and Bluetooth protocols for 1B+ Windows 10 users</li>
+                  <li>Shipped redesigned content view and Ribbon UI in File Explorer for 100M+ Windows 8 users</li>
+                </ul>
+              </div>
+
+              <div class="role">
+                <div class="role-header">
+                  <span class="role-title">Program Manager, Windows Desktop Experience and Internal Tools</span>
+                  <span class="role-date">2009 &ndash; 2012</span>
+                </div>
+                <ul class="entry-bullets">
+                  <li>Shipped redesigned content view and Ribbon UI in File Explorer for 100M+ Windows 8 users</li>
+                  <li>Conducted user experience studies to understand behavior and usage of changes for incorporating into future iterations of UI development</li>
+                  <li>Improved Windows 8 developer productivity with internal tooling and workflow enhancements; won Business Value award at internal showcase</li>
                 </ul>
               </div>
 
@@ -589,8 +606,25 @@
         </div>
       </div>
 
+      <!-- ── Personal Projects ──────────────────────────────────────────── -->
+      <div class="resume-section" id="personal-projects">
+        <h2 class="resume-section-heading">Personal Projects</h2>
+        <div class="resume-entries">
+
+          <div class="resume-entry">
+            <div class="entry-header">
+              <span class="entry-title">Web-based Social Media Post Management</span>
+              <span class="entry-date">2018 &ndash; Present</span>
+            </div>
+            <ul class="entry-bullets">
+                  <li>Developed a custom web-based application for managing and scheduling social media posts across multiple platforms in support of role working at gaming conventions 3x/year</li>
+                  <li>Supports entire lifecycle of posts from initial drafts/revisions to posting on public accounts; integrates directly with Discord and Bluesky platform APIs for direct posting and management</li>
+                  <li>Started project in 2018 using JS/Angular; rewrote and currently maintained in Python/Django since 2019</li>
+                </ul>
+          </div>
+
       <!-- ── Education ────────────────────────────────────────────────── -->
-      <div class="resume-section">
+      <div class="resume-section" id="education">
         <h2 class="resume-section-heading">Education</h2>
         <div class="resume-entries">
 
@@ -625,10 +659,10 @@
           <div class="skills-category">
             <span class="skills-category-label">Technical Domains</span>
             <div class="skills-row">
-              <span class="skill-tag">Developer Platforms &amp; SDKs</span>
+              <span class="skill-tag">Developer Toolchains &amp; SDKs</span>
               <span class="skill-tag">App Store Infrastructure</span>
-              <span class="skill-tag">iOS, macOS, tvOS &amp; watchOS</span>
-              <span class="skill-tag">Game Platform Integration</span>
+              <span class="skill-tag">iOS, macOS, tvOS, watchOS, and visionOS Development</span>
+              <span class="skill-tag">Game Engines</span>
               <span class="skill-tag">Connected Devices / IoT</span>
             </div>
           </div>
@@ -641,6 +675,7 @@
               <span class="skill-tag">Agile Program Delivery</span>
               <span class="skill-tag">Process Improvement</span>
               <span class="skill-tag">Milestone Tracking</span>
+              <span class="skill-tag">New Product Introduction / Launches</span>
             </div>
           </div>
 
