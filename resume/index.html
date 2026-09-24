@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Résumé — Jeff Guebert</title>
   <meta name="description" content="Jeff Guebert — Résumé. Program manager in tech and gaming. Seattle, WA.">
-  <link rel="canonical" href="https://jeffguebert.com/resume">
+  <link rel="canonical" href="https://jeffguebert.com/resume/">
 
   <!-- Open Graph -->
   <meta property="og:title"       content="Résumé — Jeff Guebert">
   <meta property="og:description" content="Program manager in tech and gaming. Seattle, WA.">
   <meta property="og:image"       content="https://jeffguebert.com/assets/og-image.png">
-  <meta property="og:url"         content="https://jeffguebert.com/resume">
+  <meta property="og:url"         content="https://jeffguebert.com/resume/">
   <meta property="og:type"        content="website">
 
   <!-- Twitter Card -->
@@ -296,26 +296,6 @@
       line-height: 1.6;
     }
 
-    .entry-link {
-      display: inline-flex;
-      align-items: center;
-      vertical-align: middle;
-      margin-left: 0.3rem;
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 150ms ease;
-    }
-
-    .entry-link:hover {
-      color: var(--accent-blue);
-    }
-
-    .entry-link:focus-visible {
-      outline: 2px solid var(--accent-blue);
-      outline-offset: 2px;
-      border-radius: 2px;
-    }
-
     a.employer-name {
       display: inline-flex;
       align-items: center;
@@ -348,12 +328,6 @@
       outline: 2px solid var(--accent-blue);
       outline-offset: 2px;
       border-radius: 2px;
-    }
-
-    .skills-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
     }
 
     .skill-tag {
@@ -395,7 +369,6 @@
 
       #theme-toggle,
       .resume-back,
-      .entry-link,
       a.employer-name svg,
       a.entry-org svg,
       footer {
@@ -584,7 +557,6 @@
                 <ul class="entry-bullets">
                   <li>Chaired Wi-Fi Easy Setup Project in Open Connectivity Foundation with 10+ industry partners focused on AllJoyn/IoTivity protocol enhancements</li>
                   <li>Enhanced Windows MTP, UPnP, WSD, and Bluetooth protocols for 1B+ Windows 10 users</li>
-                  <li>Shipped redesigned content view and Ribbon UI in File Explorer for 100M+ Windows 8 users</li>
                 </ul>
               </div>
 
@@ -617,11 +589,14 @@
               <span class="entry-date">2018 &ndash; Present</span>
             </div>
             <ul class="entry-bullets">
-                  <li>Developed a custom web-based application for managing and scheduling social media posts across multiple platforms in support of role working at gaming conventions 3x/year</li>
-                  <li>Supports entire lifecycle of posts from initial drafts/revisions to posting on public accounts; integrates directly with Discord and Bluesky platform APIs for direct posting and management</li>
-                  <li>Started project in 2018 using JS/Angular; rewrote and currently maintained in Python/Django since 2019</li>
-                </ul>
+              <li>Developed a custom web-based application for managing and scheduling social media posts across multiple platforms in support of role working at gaming conventions 3x/year</li>
+              <li>Supports entire lifecycle of posts from initial drafts/revisions to posting on public accounts; integrates directly with Discord and Bluesky platform APIs for direct posting and management</li>
+              <li>Started project in 2018 using JS/Angular; rewrote and currently maintained in Python/Django since 2019</li>
+            </ul>
           </div>
+
+        </div>
+      </div>
 
       <!-- ── Education ────────────────────────────────────────────────── -->
       <div class="resume-section" id="education">
@@ -728,7 +703,6 @@
       var a = document.createElement('a');
       a.href = 'mailto:' + addr;
       a.className = 'contact-link';
-      a.setAttribute('aria-label', 'Email Jeff Guebert');
       a.innerHTML =
         '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24"' +
         ' fill="none" stroke="currentColor" stroke-width="2"' +
