@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Résumé — Jeff Guebert</title>
+  <meta name="description" content="Jeff Guebert — Résumé. Program manager in tech and gaming. Seattle, WA.">
+  <link rel="canonical" href="https://jeffguebert.com/resume/">
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Résumé — Jeff Guebert">
+  <meta property="og:description" content="Program manager in tech and gaming. Seattle, WA.">
+  <meta property="og:image"       content="https://jeffguebert.com/assets/og-image.png">
+  <meta property="og:url"         content="https://jeffguebert.com/resume/">
+  <meta property="og:type"        content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Résumé — Jeff Guebert">
+  <meta name="twitter:description" content="Program manager in tech and gaming. Seattle, WA.">
+  <meta name="twitter:image"       content="https://jeffguebert.com/assets/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png"     href="/assets/favicon-32.png" sizes="32x32">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- Apply stored theme before first paint to prevent flash -->
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') {
+        document.documentElement.setAttribute('data-theme', t);
+      }
+    }());
+  </script>
+
+  <style>
+    main {
+      padding-top: 3rem;
+      gap: 0;
+      max-width: 900px;
+    }
+
+    .resume {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .resume-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.375rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .resume-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      font-size: 0.825rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.75rem;
+      transition: color 150ms ease;
+    }
+
+    .resume-back:hover {
+      color: var(--accent-blue);
+    }
+
+    .resume-back:focus-visible {
+      outline: 2px solid var(--accent-blue);
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+
+    .resume-name {
+      font-size: clamp(1.75rem, 5vw, 2.5rem);
+      font-weight: 700;
+      font-variant-caps: small-caps;
+      color: var(--text-heading);
+      letter-spacing: 0.025em;
+      line-height: 1.1;
+    }
+
+    .resume-subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+    }
+
+    .resume-section {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .resume-section-heading {
+      font-size: 0.825rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding-bottom: 0.375rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .resume-contact {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.825rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 150ms ease;
+    }
+
+    .contact-link:hover { color: var(--accent-blue); }
+
+    .contact-link:focus-visible {
+      outline: 2px solid var(--accent-blue);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    .resume-summary-text {
+      font-size: 0.925rem;
+      line-height: 1.65;
+      color: var(--text);
+    }
+
+    .skills-categories {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .skills-category {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .skills-category-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .skills-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .resume-entries {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    /* ── Employer block (groups multiple roles at one company) ── */
+
+    .employer {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .employer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .employer-name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-heading);
+    }
+
+    .employer-span {
+      font-size: 0.825rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .employer-roles {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-left: 1rem;
+      border-left: 2px solid var(--border);
+    }
+
+    .role {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .role-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .role-title {
+      font-size: 0.925rem;
+      font-weight: 500;
+      color: var(--accent-blue);
+    }
+
+    .role-date {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    /* ── Single-company entry (Education reuses these) ── */
+
+    .resume-entry {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .entry-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-heading);
+    }
+
+    .entry-date {
+      font-size: 0.825rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .entry-org {
+      font-size: 0.925rem;
+      font-weight: 500;
+      color: var(--accent-blue);
+    }
+
+    .entry-bullets {
+      margin-top: 0.375rem;
+      padding-left: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .entry-bullets li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .entry-detail {
+      margin-top: 0.375rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    a.employer-name {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--text-heading);
+      text-decoration: none;
+      transition: color 150ms ease;
+    }
+
+    a.employer-name:hover { color: var(--accent-blue); }
+
+    a.employer-name:focus-visible {
+      outline: 2px solid var(--accent-blue);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    a.entry-org {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--accent-blue);
+      text-decoration: none;
+      transition: opacity 150ms ease;
+    }
+
+    a.entry-org:hover { opacity: 0.75; }
+
+    a.entry-org:focus-visible {
+      outline: 2px solid var(--accent-blue);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    .skill-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.3rem 0.8rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.825rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    @media (max-width: 480px) {
+      .employer-header,
+      .role-header,
+      .entry-header {
+        flex-direction: column;
+        gap: 0.1rem;
+      }
+    }
+
+    @media print {
+      @page {
+        size: letter portrait;
+        margin: 0.55in 0.7in;
+      }
+
+      :root {
+        --bg:           white;
+        --bg-card:      #f4f4f4;
+        --text:         #111;
+        --text-heading: #000;
+        --text-muted:   #555;
+        --accent-blue:  #1a5fa8;
+        --border:       #ccc;
+      }
+
+      #theme-toggle,
+      .resume-back,
+      a.employer-name svg,
+      a.entry-org svg,
+      footer {
+        display: none !important;
+      }
+
+      body {
+        background: white;
+        padding: 0;
+        font-size: 10pt;
+        line-height: 1.45;
+        align-items: stretch;
+      }
+
+      main {
+        max-width: 100%;
+        padding-top: 0;
+        gap: 0;
+      }
+
+      .resume         { gap: 1.1rem; }
+      .resume-header  { gap: 0.15rem; padding-bottom: 0.1rem; }
+      .resume-name    { font-size: 18pt; }
+      .resume-subtitle { font-size: 10pt; }
+
+      .resume-section  { gap: 0.5rem; }
+      .resume-entries  { gap: 0.75rem; }
+
+      .employer        { gap: 0.35rem; break-inside: avoid; }
+      .employer-name   { font-size: 10pt; }
+      .employer-span   { font-size: 9pt; }
+      .employer-roles  { gap: 0.45rem; padding-left: 0.75rem; }
+
+      .role            { break-inside: avoid; }
+      .role-title      { font-size: 9.5pt; }
+      .role-date       { font-size: 8.5pt; }
+
+      .entry-bullets   { margin-top: 0.15rem; gap: 0.05rem; }
+      .entry-bullets li { font-size: 9pt; line-height: 1.4; }
+
+      .resume-entry    { break-inside: avoid; }
+      .entry-title     { font-size: 10pt; }
+      .entry-date      { font-size: 9pt; }
+      .entry-org       { font-size: 9.5pt; }
+      .entry-detail    { font-size: 9pt; margin-top: 0.1rem; }
+
+      .resume-section-heading { font-size: 7.5pt; padding-bottom: 0.2rem; }
+
+      .resume-contact      { gap: 0.75rem; margin-top: 0.25rem; }
+      .contact-link        { font-size: 8.5pt; color: #444; }
+      .contact-link svg    { display: none; }
+      .resume-summary-text { font-size: 9pt; line-height: 1.5; }
+      .skills-categories   { gap: 0.5rem; }
+      .skills-category     { gap: 0.2rem; }
+      .skills-category-label { font-size: 7pt; }
+      .skills-row          { gap: 0.25rem; }
+      .skill-tag           { font-size: 8.5pt; padding: 0.15rem 0.55rem; }
+
+      #personal-projects { break-before: page; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Theme toggle ──────────────────────────────────────────────────── -->
+  <button id="theme-toggle" aria-label="Switch to light mode">
+    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+         viewBox="0 0 24 24" fill="none" stroke="currentColor"
+         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+         viewBox="0 0 24 24" fill="none" stroke="currentColor"
+         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="5"/>
+      <line x1="12" y1="1"  x2="12" y2="3"/>
+      <line x1="12" y1="21" x2="12" y2="23"/>
+      <line x1="4.22"  y1="4.22"  x2="5.64"  y2="5.64"/>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+      <line x1="1"  y1="12" x2="3"  y2="12"/>
+      <line x1="21" y1="12" x2="23" y2="12"/>
+      <line x1="4.22"  y1="19.78" x2="5.64"  y2="18.36"/>
+      <line x1="18.36" y1="5.64"  x2="19.78" y2="4.22"/>
+    </svg>
+  </button>
+
+  <main>
+    <section class="resume" aria-label="Résumé">
+
+      <!-- Header -->
+      <div class="resume-header">
+        <a href="/" class="resume-back">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+               viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+          Homepage
+        </a>
+        <h1 class="resume-name">Jeff Guebert</h1>
+        <p class="resume-subtitle">Senior Program Manager &middot; Seattle, WA</p>
+        <div class="resume-contact">
+          <span id="resume-email-slot"></span>
+          <a href="https://linkedin.com/in/jguebert" class="contact-link"
+             target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24"
+                 fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            linkedin.com/in/jguebert
+          </a>
+        </div>
+      </div>
+
+      <!-- ── Summary ───────────────────────────────────────────────────── -->
+      <div class="resume-section" id="summary">
+        <h2 class="resume-section-heading">Summary</h2>
+        <p class="resume-summary-text">Senior Program Manager with 15+ years leading and delivering cross-functional engineering initiatives spanning platform services, SDKs, developer tooling, and consumer-facing experiences at Apple and Microsoft. Combines deep technical fluency with strong organizational influence to align engineering, design, and marketing teams around high-impact and quality outcomes.</p>
+      </div>
+
+      <!-- ── Work Experience ──────────────────────────────────────────── -->
+      <div class="resume-section" id="work-experience">
+        <h2 class="resume-section-heading">Work Experience</h2>
+        <div class="resume-entries">
+
+          <div class="employer">
+            <div class="employer-header">
+              <a href="https://games.apple.com" class="employer-name" target="_blank" rel="noopener noreferrer">Apple Inc.<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+              <span class="employer-span">December 2016 &ndash; Present</span>
+            </div>
+            <div class="employer-roles">
+
+              <div class="role">
+                <div class="role-header">
+                  <span class="role-title">Senior Program Manager, Apple Games</span>
+                  <span class="role-date">August 2025 &ndash; Present</span>
+                </div>
+                <ul class="entry-bullets">
+                  <li>Delivering Game Overlay on iOS and macOS across engineering and design teams, improving the in-game experience for 400M+ players</li>
+                  <li>Shipping Unity SDK plugins used by almost 2,000 game studios, enabling native Apple framework integration</li>
+                  <li>Improving Mac App Store game distribution, streamlining submission workflows for all App Store developers</li>
+                  <li>Mentoring junior team members and fostering a culture of innovation and collaboration</li>
+                </ul>
+              </div>
+
+              <div class="role">
+                <div class="role-header">
+                  <span class="role-title">Senior Program Manager Lead, App Store Developer Features</span>
+                  <span class="role-date">March 2021 &ndash; August 2025</span>
+                </div>
+                <ul class="entry-bullets">
+                  <li>Hired and led 4-person App Processing and TestFlight EPM team managing roadmap and projects for 20+ engineering and quality team partners</li>
+                  <li>Managed cross-functional relationships with engineering, design, and marketing teams to drive product development and delivery</li>
+                  <li>Reviewed and approved internal and external communications and documentation for 15+ server deployments annually</li>
+                </ul>
+              </div>
+
+              <div class="role">
+                <div class="role-header">
+                  <span class="role-title">Senior Program Manager, App Store Developer Features</span>
+                  <span class="role-date">December 2016 &ndash; March 2021</span>
+                </div>
+                <ul class="entry-bullets">
+                  <li>Owned App Store backend processing and validations pipeline for all App Store developers across iOS, tvOS, watchOS, and macOS</li>
+                  <li>Delivered feature updates driven by developer and customer feedback, improving platform performance and reliability</li>
+                  <li>Maintained project alignment across 30+ engineering and quality teams working in parallel across 5+ annual developer software releases</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="employer">
+            <div class="employer-header">
+              <span class="employer-name">Microsoft Corporation</span>
+              <span class="employer-span">July 2009 &ndash; November 2016</span>
+            </div>
+            <div class="employer-roles">
+
+              <div class="role">
+                <div class="role-header">
+                  <span class="role-title">Program Manager 2, Windows Devices and Connectivity</span>
+                  <span class="role-date">2012 &ndash; 2016</span>
+                </div>
+                <ul class="entry-bullets">
+                  <li>Chaired Wi-Fi Easy Setup Project in Open Connectivity Foundation with 10+ industry partners focused on AllJoyn/IoTivity protocol enhancements</li>
+                  <li>Enhanced Windows MTP, UPnP, WSD, and Bluetooth protocols for 1B+ Windows 10 users</li>
+                </ul>
+              </div>
+
+              <div class="role">
+                <div class="role-header">
+                  <span class="role-title">Program Manager, Windows Desktop Experience and Internal Tools</span>
+                  <span class="role-date">2009 &ndash; 2012</span>
+                </div>
+                <ul class="entry-bullets">
+                  <li>Shipped redesigned content view and Ribbon UI in File Explorer for 100M+ Windows 8 users</li>
+                  <li>Conducted user experience studies to understand behavior and usage of changes for incorporating into future iterations of UI development</li>
+                  <li>Improved Windows 8 developer productivity with internal tooling and workflow enhancements; won Business Value award at internal showcase</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Personal Projects ──────────────────────────────────────────── -->
+      <div class="resume-section" id="personal-projects">
+        <h2 class="resume-section-heading">Personal Projects</h2>
+        <div class="resume-entries">
+
+          <div class="resume-entry">
+            <div class="entry-header">
+              <span class="entry-title">Web-based Social Media Post Management</span>
+              <span class="entry-date">2018 &ndash; Present</span>
+            </div>
+            <ul class="entry-bullets">
+              <li>Developed a custom web-based application for managing and scheduling social media posts across multiple platforms in support of role working at gaming conventions 3x/year</li>
+              <li>Supports entire lifecycle of posts from initial drafts/revisions to posting on public accounts; integrates directly with Discord and Bluesky platform APIs for direct posting and management</li>
+              <li>Started project in 2018 using JS/Angular; rewrote and currently maintained in Python/Django since 2019</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Education ────────────────────────────────────────────────── -->
+      <div class="resume-section" id="education">
+        <h2 class="resume-section-heading">Education</h2>
+        <div class="resume-entries">
+
+          <div class="resume-entry">
+            <div class="entry-header">
+              <span class="entry-title">B.S. in Computer Science</span>
+              <span class="entry-date">2005 &ndash; 2009</span>
+            </div>
+            <a href="https://cs.utdallas.edu" class="entry-org" target="_blank" rel="noopener noreferrer">University of Texas at Dallas<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <p class="entry-detail">Summa Cum Laude, Major Honors, Collegium V Honors</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Skills ───────────────────────────────────────────────────── -->
+      <div class="resume-section">
+        <h2 class="resume-section-heading">Skills</h2>
+        <div class="skills-categories">
+
+          <div class="skills-category">
+            <span class="skills-category-label">Program Leadership</span>
+            <div class="skills-row">
+              <span class="skill-tag">Cross-Functional Leadership</span>
+              <span class="skill-tag">Executive Stakeholder Management</span>
+              <span class="skill-tag">Roadmap &amp; Portfolio Planning</span>
+              <span class="skill-tag">Resource Planning</span>
+              <span class="skill-tag">Risk Management</span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <span class="skills-category-label">Technical Domains</span>
+            <div class="skills-row">
+              <span class="skill-tag">Developer Toolchains &amp; SDKs</span>
+              <span class="skill-tag">App Store Infrastructure</span>
+              <span class="skill-tag">iOS, macOS, tvOS, watchOS, and visionOS Development</span>
+              <span class="skill-tag">Game Engines</span>
+              <span class="skill-tag">Connected Devices / IoT</span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <span class="skills-category-label">Delivery &amp; Operations</span>
+            <div class="skills-row">
+              <span class="skill-tag">Software Development Lifecycle (SDLC)</span>
+              <span class="skill-tag">Release &amp; Launch Management</span>
+              <span class="skill-tag">Agile Program Delivery</span>
+              <span class="skill-tag">Process Improvement</span>
+              <span class="skill-tag">Milestone Tracking</span>
+              <span class="skill-tag">New Product Introduction / Launches</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ── Footer ──────────────────────────────────────────────────────── -->
+  <footer>
+    <p>&copy; <span id="year"></span> Jeff Guebert</p>
+  </footer>
+
+  <!-- ── JS: theme toggle + year ─────────────────────────────────────── -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    var toggle = document.getElementById('theme-toggle');
+
+    function effectiveTheme() {
+      var stored = document.documentElement.getAttribute('data-theme');
+      if (stored) return stored;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      toggle.setAttribute(
+        'aria-label',
+        theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
+      );
+    }
+
+    toggle.setAttribute(
+      'aria-label',
+      effectiveTheme() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
+    );
+
+    toggle.addEventListener('click', function () {
+      applyTheme(effectiveTheme() === 'dark' ? 'light' : 'dark');
+    });
+
+    // Assemble email link at runtime so the address is never in the HTML source
+    (function () {
+      var slot = document.getElementById('resume-email-slot');
+      if (!slot) return;
+      var addr = ['jeff', 'jeffguebert' + '.com'].join('@');
+      var a = document.createElement('a');
+      a.href = 'mailto:' + addr;
+      a.className = 'contact-link';
+      a.innerHTML =
+        '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24"' +
+        ' fill="none" stroke="currentColor" stroke-width="2"' +
+        ' stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+        '<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>' +
+        '<polyline points="22,6 12,13 2,6"/></svg>' + addr;
+      slot.parentNode.replaceChild(a, slot);
+    }());
+  </script>
+
+</body>
+</html>
