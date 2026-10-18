@@ -28,14 +28,7 @@
   <link rel="stylesheet" href="style.css">
 
   <!-- Apply stored theme before first paint to prevent flash -->
-  <script>
-    (function () {
-      var t = localStorage.getItem('theme');
-      if (t === 'light' || t === 'dark') {
-        document.documentElement.setAttribute('data-theme', t);
-      }
-    }());
-  </script>
+  <script src="/theme.js"></script>
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -91,7 +84,8 @@
       <div class="monogram" role="img" aria-label="JG Monogram">
         <svg width="100%" height="100%" viewBox="0 0 400 400"
              xmlns="http://www.w3.org/2000/svg"
-             style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"
+             fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round"
+             stroke-linejoin="round" stroke-miterlimit="1.5"
              aria-hidden="true">
           <title>JG</title>
           <g transform="matrix(0.648439,0,0,0.648439,-1108.48,-1550.81)">
@@ -231,37 +225,7 @@
   </footer>
 
   <!-- ── JS: theme toggle + year ─────────────────────────────────────── -->
-  <script>
-    // Current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    var toggle = document.getElementById('theme-toggle');
-
-    function effectiveTheme() {
-      var stored = document.documentElement.getAttribute('data-theme');
-      if (stored) return stored;
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-
-    function applyTheme(theme) {
-      document.documentElement.setAttribute('data-theme', theme);
-      localStorage.setItem('theme', theme);
-      toggle.setAttribute(
-        'aria-label',
-        theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
-      );
-    }
-
-    // Sync aria-label with current state on load
-    toggle.setAttribute(
-      'aria-label',
-      effectiveTheme() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
-    );
-
-    toggle.addEventListener('click', function () {
-      applyTheme(effectiveTheme() === 'dark' ? 'light' : 'dark');
-    });
-  </script>
+  <script src="/site.js"></script>
 
 </body>
 </html>
