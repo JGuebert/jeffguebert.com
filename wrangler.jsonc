@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "jeffguebert-com",
+  "name": "jgcom-homepage",
   "compatibility_date": "2026-09-01",
   "routes": [
     { "pattern": "jeffguebert.com", "custom_domain": true },
