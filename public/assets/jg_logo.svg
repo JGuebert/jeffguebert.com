@@ -1,9 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="JG monogram">
-  <title>JG monogram</title>
-  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M360 40H40" stroke-width="28"/>
-        <path d="M200 41v318" stroke-width="31"/>
-    <path d="M358 358l-98-98" stroke-width="27"/>
-    <path d="M360 360H40v-70" stroke-width="28"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="165 165 230 230" role="img" aria-label="JG" color="#111">
+  <title>JG</title>
+  <!-- The homepage references #jg via <use>, so the mark inherits the page's text colour -->
+  <g id="jg" fill="none" stroke="currentColor" stroke-width="40" stroke-linejoin="round">
+    <path d="M200 200V360" stroke-linecap="butt"/>
+    <path d="M200 360h160" stroke-linecap="round"/>
+    <path d="M360 360l-100-100" stroke-linecap="round"/>
+    <circle cx="200" cy="360" r="20" fill="currentColor" stroke="none"/>
   </g>
 </svg>
